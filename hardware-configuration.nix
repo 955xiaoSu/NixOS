@@ -15,6 +15,11 @@
 		kernelParams = ["i8042.dumbkbd=1"];
 		extraModulePackages = [ ];
 	};
+
+	# modify "device" according to your filesystem path
+	# you can use "blkid" command to check your filesystem's uuid
+	# be careful don't miss paramaters you pass to filesystem
+	# otherwise, it may cause package hash wrong
 	fileSystems = {
 		"/" = {
 			device = "/dev/disk/by-uuid/2b57eb63-3774-45e8-a160-1c17add41793"; 
