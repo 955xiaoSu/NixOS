@@ -12,6 +12,7 @@
 		};
 		kernelPackages = pkgs.linuxPackages_latest;
 		kernelModules = [ "kvm-intel" ];
+		# if your device is Lenovo Yoga 14s，add i8042.dumbkbd which make your keyboard work
 		kernelParams = ["i8042.dumbkbd=1"];
 		extraModulePackages = [ ];
 	};
