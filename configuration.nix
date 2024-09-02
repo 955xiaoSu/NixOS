@@ -7,6 +7,9 @@
 {
 	imports = [ ./hardware-configuration.nix ];
 	boot.loader = {
+		# if you decide to use grub as bootloader
+		# and you have windows in your machine
+		# add line 13-23 as below
 		grub = {
 			enable = true;
 			device = "nodev";
@@ -42,5 +45,5 @@
 	];
 
 	nix.settings.substituters = ["https://mirror.sjtu.edu.cn/nix-channels/store"];
-	system.stateVersion = "24.05"; # Did you read the comment?
+	system.stateVersion = "24.05"; # Don't modify this line, just use your machine's configuration of "system.stateVersion"
 }
